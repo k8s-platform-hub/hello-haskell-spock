@@ -1,7 +1,0 @@
-package: .
-import:
-- package: github.com/kataras/iris
-  subpackages:
-  - adaptors/httprouter
-- package: gopkg.in/kataras/iris.v6
-  version: v6.2

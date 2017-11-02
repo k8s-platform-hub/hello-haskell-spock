@@ -1,4 +1,4 @@
-description: A basic project for Golang-Iris using Hasura
+description: A basic haskell-spock web-app using Hasura
 keywords: base, getting-started, csharp, asp, .net, asp.net
-name: hello-golang-iris
+name: hello-haskell-spock
 platformVersion: v0.15.3

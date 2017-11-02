@@ -1,8 +1,8 @@
-# hello-golang-iris
+# hello-haskell-spock
 
-This project consists of a basic hasura project with a simple Go-lang Iris app running on it. Once this app is deployed on a Hasura cluster, you will have the app running at [https://app.cluster-name.hasura-app.io](https://app.cluster-name.hasura-app.io).
+This project consists of a basic hasura project with a simple Haskell-Spock app running on it. Once this app is deployed on a Hasura cluster, you will have the app running at [https://app.cluster-name.hasura-app.io](https://app.cluster-name.hasura-app.io).
 
-This is the right place to start if you are planning to build or want to learn to build an Go-lang Iris app with hasura.
+This is the right place to start if you are planning to build or want to learn to build a Haskell-Spock app with hasura.
 
 ## Sections
 
@@ -12,7 +12,7 @@ This is the right place to start if you are planning to build or want to learn t
 * [Auth API](#auth-apis)
 * [Filestore API](#filestore-apis)
 * [Custom service](#custom-service)
-* [Migrate from an existing Iris app](#migrate-from-an-existing-project)
+* [Migrate from an existing Haskell-Spock app](#migrate-from-an-existing-project)
 * [Local development](#local-development)
 * [FAQ](#faq)
 
@@ -29,14 +29,14 @@ Follow this section to get this project working. Before you begin, ensure you ha
 ### Step 1: Getting the project
 
 ```sh
-$ hasura quickstart hello-golang-iris
-$ cd hello-golang-iris
+$ hasura quickstart hello-haskell-spock
+$ cd hello-haskell-spock
 ```
 
 The above command does the following:
-1. Creates a new folder in the current working directory called `hello-golang-iris`
+1. Creates a new folder in the current working directory called `hello-haskell-spock`
 2. Creates a new free hasura cluster for you and sets that cluster as the default cluster for this project
-3. Initializes `hello-golang-iris` as a git repository and adds the necessary git remotes.
+3. Initializes `hello-haskell-spock` as a git repository and adds the necessary git remotes.
 
 ### Step 2: Getting cluster information
 
@@ -146,7 +146,7 @@ You can try out these in the `API EXPLORER` tab of the `api console`. To learn m
 
 There might be cases where you might want to perform some custom business logic on your apis. For example, sending an email/sms to a user on sign up or sending a push notification to the mobile device when some event happens. For this, you would want to create your own custom service which does these for you on the endpoints that you define.
 
-This quickstart comes with one such custom service written in Golang using the Iris framework. Check it out in action at `https://app.cluster-name.hasura-app.io` . Currently, it just returns a JSON response of "Hello World" at that endpoint.
+This quickstart comes with one such custom service written in Haskell using the Spock framework. Check it out in action at `https://app.cluster-name.hasura-app.io` . Currently, it just returns a JSON response of "Hello World" at that endpoint.
 
 In case you want to use another language/framework for your custom service. Take a look at our docs to see how you can add a new custom service.
 
@@ -171,8 +171,8 @@ Follow these steps to test out your app locally
 
 ```sh
 $ cd services/app/
-$ docker build -t go-iris:<tag> .
-$ docker run -d -p 8080:8080 go-iris:<tag>
+$ docker build -t haskell-spock:<tag> .
+$ docker run -d -p 8080:8080 haskell-spock:<tag>
 ```
 Your app will be running on port 8080.
 
