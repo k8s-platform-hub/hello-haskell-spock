@@ -1,0 +1,4 @@
+description: A basic project for Golang-Iris using Hasura
+keywords: base, getting-started, csharp, asp, .net, asp.net
+name: hello-golang-iris
+platformVersion: v0.15.3
