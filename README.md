@@ -11,7 +11,7 @@ This is the right place to start if you are planning to build or want to learn t
 * [Data API](#data-apis)
 * [Auth API](#auth-apis)
 * [Filestore API](#filestore-apis)
-* [Custom service](#custom-service)
+* [Custom microservice](#custom-microservice)
 * [Migrate from an existing Haskell-Spock app](#migrate-from-an-existing-project)
 * [Local development](#local-development)
 * [FAQ](#faq)
@@ -142,19 +142,19 @@ Sometimes, you would want to upload some files to the cloud. This can range from
 
 You can try out these in the `API EXPLORER` tab of the `api console`. To learn more, check out our [docs](https://docs.hasura-stg.hasura-app.io/0.15/manual/users/index.html)
 
-## Custom Service
+## Custom Micromicroservice
 
-There might be cases where you might want to perform some custom business logic on your apis. For example, sending an email/sms to a user on sign up or sending a push notification to the mobile device when some event happens. For this, you would want to create your own custom service which does these for you on the endpoints that you define.
+There might be cases where you might want to perform some custom business logic on your apis. For example, sending an email/sms to a user on sign up or sending a push notification to the mobile device when some event happens. For this, you would want to create your own custom microservice which does these for you on the endpoints that you define.
 
-This quickstart comes with one such custom service written in Haskell using the Spock framework. Check it out in action at `https://app.cluster-name.hasura-app.io` . Currently, it just returns a JSON response of "Hello World" at that endpoint.
+This quickstart comes with one such custom microservice written in Haskell using the Spock framework. Check it out in action at `https://app.cluster-name.hasura-app.io` . Currently, it just returns a JSON response of "Hello World" at that endpoint.
 
-In case you want to use another language/framework for your custom service. Take a look at our docs to see how you can add a new custom service.
+In case you want to use another language/framework for your custom microservice. Take a look at our docs to see how you can add a new custom microservice.
 
 ## Migrate from an existing project
 
 If you have an existing ASP.NET app and would like to migrate it to Hasura:
 
-- Replace the `services/app/app` directory with your app directory.
+- Replace the `microservices/app/app` directory with your app directory.
 - Ensure that the structure of the directory is coherent with the current structure.
 - `git add . && git commit -m "Migration Commit"`
 - `git push hasura master`
@@ -170,7 +170,7 @@ Everytime you push, your code will get deployed on a public URL. However, for fa
 Follow these steps to test out your app locally
 
 ```sh
-$ cd services/app/
+$ cd microservices/app/
 $ docker build -t haskell-spock:<tag> .
 $ docker run -d -p 8080:8080 haskell-spock:<tag>
 ```
@@ -201,7 +201,7 @@ The project (a.k.a. project directory) has a particular directory structure and 
 │   ├── 1504788327_create_table_user.down.sql
 │   ├── 1504788327_create_table_user.up.yaml
 │   └── 1504788327_create_table_user.up.sql
-└── services
+└── microservices
     └── app
         ├── app/
         ├── k8s.yaml
