@@ -18,3 +18,7 @@ routes = do
 
   get "inside" $ do
   	text $ pack "Hello from the inside"
+
+
+  get "outside" $ do
+  	text $ pack "Hello from the outside"
