@@ -11,4 +11,6 @@ COPY  . /usr/src/app
 
 RUN pwd
 RUN stack build --fast
-CMD stack exec haskell-spock
+RUN stack install --local-bin-path /usr/bin
+RUN rm -rf /usr/src/app /opt/ghc /root/.stack
+CMD haskell-spock
